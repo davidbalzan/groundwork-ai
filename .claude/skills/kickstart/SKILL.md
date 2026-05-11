@@ -206,6 +206,17 @@ Provide a summary of everything created:
 8. Stage 7: Summary and next steps
 ```
 
+## Logging Convention (Inherited from Template)
+
+Every project derived from ForgeKit ships with structured logging out of the box:
+
+- **Server (`apps/api`)**: pino writes NDJSON to console **and** `logs/api.log` at the repo root.
+- **Browser (`apps/web`)**: a tiny logger in `apps/web/src/logger.ts` mirrors to `console` and POSTs batched entries to `/api/logs`, which pino re-emits with `source: "client"`.
+- **Result**: a single file (`logs/api.log`) captures both sides, ideal for `tail -f` by humans or AI agents.
+- `LOG_LEVEL` env var controls verbosity (default `info`).
+
+When generating `ARCHITECTURE_GUIDE.md` or initial ADRs, mention this convention so it's not silently lost as the project evolves. If the user picks a different stack (Python/Go/etc.), adapt the same pattern: structured logs to file + console, browser logs forwarded server-side, single tailable file.
+
 ## Tips
 
 - **Start lean**: You can always add more detail later

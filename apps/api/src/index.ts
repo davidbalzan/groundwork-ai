@@ -1,14 +1,28 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
-import { logger } from "hono/logger";
 import "dotenv/config";
 import { env } from "./env.js";
+import { logger, logFilePath } from "./logger.js";
 import { healthRoutes } from "./routes/health.js";
+import { logRoutes } from "./routes/logs.js";
 
 const app = new Hono();
 
-app.use("*", logger());
+app.use("*", async (c, next) => {
+  const start = Date.now();
+  await next();
+  logger.info(
+    {
+      method: c.req.method,
+      path: c.req.path,
+      status: c.res.status,
+      durMs: Date.now() - start,
+    },
+    "request"
+  );
+});
+
 app.use(
   "*",
   cors({
@@ -17,7 +31,7 @@ app.use(
 );
 
 app.onError((err, c) => {
-  console.error(`[Error] ${err.stack}`);
+  logger.error({ err, path: c.req.path }, "unhandled error");
   return c.json({ error: "Internal Server Error" }, 500);
 });
 
@@ -26,9 +40,13 @@ app.notFound((c) => {
 });
 
 app.route("/api", healthRoutes);
+app.route("/api", logRoutes);
 
 serve({ fetch: app.fetch, port: env.API_PORT }, () => {
-  console.log(`Server running on http://localhost:${env.API_PORT}`);
+  logger.info(
+    { port: env.API_PORT, logFile: logFilePath },
+    `Server running on http://localhost:${env.API_PORT}`
+  );
 });
 
 export default app;

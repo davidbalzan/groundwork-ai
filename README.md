@@ -36,6 +36,17 @@ Then in your AI assistant:
 /start-session # loads project context at the start of each session
 ```
 
+## Logs
+
+The API uses [pino](https://github.com/pinojs/pino) and writes structured NDJSON to both the console and `logs/api.log`. The web app forwards browser logs (and uncaught errors) to `POST /api/logs`, so one file captures both sides.
+
+```bash
+tail -f logs/api.log                    # all server + client logs
+tail -f logs/api.log | grep '"client"'  # browser-side only
+```
+
+`LOG_LEVEL` (default `info`) controls verbosity. AI agents working in this repo can tail `logs/api.log` to observe runtime behavior across both apps.
+
 ## Open the docs as an Obsidian vault
 
 ```

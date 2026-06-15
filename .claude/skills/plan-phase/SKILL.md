@@ -1,7 +1,6 @@
 ---
 name: plan-phase
 description: Generate a new phase task document using the project template
-disable-model-invocation: true
 argument-hint: "<phase number> <phase name>"
 ---
 
@@ -114,6 +113,34 @@ Each task should include:
 1. Generate the phase README
 2. Generate the detailed tasks file
 3. Update PRODUCTION_ROADMAP.md to include the new phase
-4. Summarize what was created
+4. Update docs/BACKLOG.md (see below)
+5. Summarize what was created
+
+## BACKLOG.md Integration
+
+After generating the phase task file, update `docs/BACKLOG.md`. This file is the inbound queue for the coordinator-playbook multi-agent execution loop — it is the bridge between ForgeKit phase planning and live agent dispatch.
+
+### File format
+
+```markdown
+# BACKLOG — <project>
+
+## Queue
+
+- [ ] (P1) Phase N: [Phase Name] — see [[phases/phaseN/PHASEN_TASKS]] for full breakdown · acceptance: all Phase N success criteria met
+- [ ] (P2) <ad-hoc task added by David>
+
+## Done
+
+- [x] <task> — owner/repo#N · YYYY-MM-DD
+```
+
+### Rules
+
+- **Each phase maps to a single Queue item** — reference the PHASEN_TASKS file rather than listing sub-tasks inline. The coordinator reads the linked file for the full contract.
+- **Priority mapping**: CRITICAL phase → P1, HIGH → P2, MEDIUM/LOW → P3. Default new phases to P1 unless the roadmap says otherwise.
+- **If docs/BACKLOG.md does not exist**, create it from this template. If it exists, append the new phase item to the `## Queue` section — never overwrite or reorder existing items (David owns that region).
+- **Ad-hoc tasks** (bug fixes, improvements David adds directly) live alongside phase items in the Queue — do not remove or reorder them.
+- **Do not touch `## Done`** — that section is written by the coordinator only.
 
 Phase to plan: $ARGUMENTS

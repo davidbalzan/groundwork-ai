@@ -1,7 +1,6 @@
 ---
 name: start-session
 description: Load project context from ForgeKit docs at the start of a session
-disable-model-invocation: true
 argument-hint: "[optional: specific area to focus on]"
 allowed-tools: Read, Glob, Grep
 ---
@@ -16,7 +15,8 @@ Load instant context from the ForgeKit documentation to understand current proje
 2. **Read the active phase README** - get context on current phase goals
 3. **Read the active phase TASKS file** - understand specific task breakdown
 4. **Read docs/DECISIONS.md** - check for recent or relevant ADRs
-5. **Summarize for the user**:
+5. **Read docs/BACKLOG.md** (if present) - surface the next unblocked Queue item and any ad-hoc tasks ahead of the active phase
+6. **Summarize for the user**:
    - Current phase and task in progress
    - What's been completed recently
    - What's blocked or needs attention
@@ -29,6 +29,7 @@ Load instant context from the ForgeKit documentation to understand current proje
 - `docs/phases/phaseN/README.md` - Current phase overview
 - `docs/phases/phaseN/PHASEN_TASKS.md` - Detailed task breakdown
 - `docs/DECISIONS.md` - Architectural Decision Records
+- `docs/BACKLOG.md` - Inbound task queue (phases + ad-hoc items); next unblocked P1 is what the coordinator will pick up
 
 ## Status Indicators to Look For
 
@@ -59,6 +60,9 @@ Provide a concise summary:
 ### Blockers
 - [Any blocking items]
 
+### Next Backlog Item
+- (P?) [Next unblocked Queue item from BACKLOG.md, or "No backlog found"]
+
 ### Suggested Next Steps
 1. [First priority]
 2. [Second priority]
@@ -69,6 +73,7 @@ If the user provided $ARGUMENTS, focus the summary on that specific area.
 ## Decision Relevance
 
 When surfacing decisions:
+
 - Show ADRs from the last 30 days
 - Highlight any decisions related to the current phase
 - Note any "Proposed" decisions awaiting confirmation

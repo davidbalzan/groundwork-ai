@@ -1,7 +1,6 @@
 ---
 name: kickstart
 description: Initialize a new project with ForgeKit documentation structure
-disable-model-invocation: true
 argument-hint: "<project name>"
 ---
 
@@ -124,15 +123,17 @@ Generate using the corresponding templates in `docs/templates/`:
 - `docs/phases/README.md` - from `PHASES_README_TEMPLATE.md`
 - `docs/phases/phase1/README.md` - from `PHASE_README_TEMPLATE.md`
 
-### Stage 5: Initialize Focus
+### Stage 5: Initialize Focus & Backlog
 
-Set up the current focus document:
+Set up the current focus document and task queue:
 
 - Point to Phase 1 as the starting point
 - Note any immediate next steps
 - Leave session notes empty for first session
 
 Generate `docs/CURRENT_FOCUS.md`.
+
+Create `docs/BACKLOG.md` from `docs/templates/BACKLOG_TEMPLATE.md` — leave the Queue empty at init; phases are added to it by `/plan-phase` as they are planned.
 
 ### Stage 6: Design System (Optional)
 
@@ -157,6 +158,7 @@ Provide a summary of everything created:
 - docs/ARCHITECTURE_GUIDE.md
 - docs/DECISIONS.md
 - docs/PRODUCTION_ROADMAP.md
+- docs/BACKLOG.md
 - docs/DESIGN_SYSTEM.md (if frontend)
 - docs/phases/README.md
 - docs/phases/phase1/README.md
@@ -184,6 +186,7 @@ Provide a summary of everything created:
 | `docs/phases/README.md`        | `docs/templates/PHASES_README_TEMPLATE.md`      | Phase navigation and progress       |
 | `docs/phases/phase1/README.md` | `docs/templates/PHASE_README_TEMPLATE.md`       | First phase overview                |
 | `docs/CURRENT_FOCUS.md`        | (generated from context)                        | Active work quick reference         |
+| `docs/BACKLOG.md`              | `docs/templates/BACKLOG_TEMPLATE.md`            | Inbound task queue for coordinator  |
 
 ## Templates (Pre-existing, Not Generated)
 

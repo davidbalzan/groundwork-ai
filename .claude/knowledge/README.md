@@ -4,19 +4,19 @@ Domain-specific learnings accumulated from project experience. Reference these f
 
 ## Categories
 
-| Category | File | Description |
-|----------|------|-------------|
-| general | [general.md](general.md) | General development practices |
-| typescript | [typescript.md](typescript.md) | TypeScript patterns and practices |
-| react | [react.md](react.md) | React component patterns |
-| tailwind | [tailwind.md](tailwind.md) | Tailwind CSS styling patterns |
-| testing | [testing.md](testing.md) | Testing strategies and tools |
-| architecture | [architecture.md](architecture.md) | System design and structure |
-| database | [database.md](database.md) | Database patterns and queries |
-| ai | [ai.md](ai.md) | AI integration patterns |
-| devops | [devops.md](devops.md) | Deployment and infrastructure |
-| process | [process.md](process.md) | Development workflow and methodology |
-| godot | [godot.md](godot.md) | Godot 4.5+ game engine patterns |
+| Category     | File                               | Description                          |
+| ------------ | ---------------------------------- | ------------------------------------ |
+| general      | [general.md](general.md)           | General development practices        |
+| typescript   | [typescript.md](typescript.md)     | TypeScript patterns and practices    |
+| react        | [react.md](react.md)               | React component patterns             |
+| tailwind     | [tailwind.md](tailwind.md)         | Tailwind CSS styling patterns        |
+| testing      | [testing.md](testing.md)           | Testing strategies and tools         |
+| architecture | [architecture.md](architecture.md) | System design and structure          |
+| database     | [database.md](database.md)         | Database patterns and queries        |
+| ai           | [ai.md](ai.md)                     | AI integration patterns              |
+| devops       | [devops.md](devops.md)             | Deployment and infrastructure        |
+| process      | [process.md](process.md)           | Development workflow and methodology |
+| godot        | [godot.md](godot.md)               | Godot 4.5+ game engine patterns      |
 
 ## Usage
 
@@ -29,4 +29,4 @@ These files are automatically updated via `/remember` command:
 
 ## Sync
 
-Knowledge is synced to [ForgeKit](https://github.com/davidbalzan/forgeKit) for persistence across machines and new projects.
+Knowledge is synced to [Groundwork](https://github.com/davidbalzan/groundwork-ai) for persistence across machines and new projects.

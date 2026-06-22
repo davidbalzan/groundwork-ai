@@ -1,6 +1,6 @@
 # Plan Phase - Task Document Generator
 
-**Objective**: Generate a comprehensive phase task document following the ForgeKit methodology.
+**Objective**: Generate a comprehensive phase task document following the Groundwork methodology.
 
 **Requirements**:
 
@@ -9,7 +9,7 @@
 - Create specific, actionable tasks with checkboxes
 - Include risk assessment and rollback plans for complex tasks
 
-**Obsidian format (required)**: Generated phase files (`docs/phases/phaseN/README.md` and `PHASEN_TASKS.md`) must start with YAML frontmatter (`title`, `tags: [forgekit/phase]`, `aliases`) and use `[[wikilinks]]` when referencing `[[PRODUCTION_ROADMAP]]`, `[[ARCHITECTURE_GUIDE]]`, `[[CURRENT_FOCUS]]`, `[[DECISIONS]]`, etc.
+**Obsidian format (required)**: Generated phase files (`docs/phases/phaseN/README.md` and `PHASEN_TASKS.md`) must start with YAML frontmatter (`title`, `tags: [groundwork/phase]`, `aliases`) and use `[[wikilinks]]` when referencing `[[PRODUCTION_ROADMAP]]`, `[[ARCHITECTURE_GUIDE]]`, `[[CURRENT_FOCUS]]`, `[[DECISIONS]]`, etc.
 
 ## Stage 1: Initial Discovery
 

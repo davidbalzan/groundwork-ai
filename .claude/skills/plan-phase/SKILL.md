@@ -6,7 +6,7 @@ argument-hint: "<phase number> <phase name>"
 
 # Plan Phase - Task Document Generator
 
-Generate a comprehensive phase task document following the ForgeKit methodology.
+Generate a comprehensive phase task document following the Groundwork methodology.
 
 ## Obsidian Format (Required)
 
@@ -16,7 +16,7 @@ Generated phase docs live in the `docs/` Obsidian vault. Both files MUST:
    ```yaml
    ---
    title: "Phase N: [Name]"
-   tags: [forgekit/phase]
+   tags: [groundwork/phase]
    aliases: ["Phase N"]
    ---
    ```
@@ -24,7 +24,7 @@ Generated phase docs live in the `docs/` Obsidian vault. Both files MUST:
    ```yaml
    ---
    title: "Phase N Tasks"
-   tags: [forgekit/phase, forgekit/tasks]
+   tags: [groundwork/phase, groundwork/tasks]
    aliases: ["Phase N Tasks"]
    ---
    ```
@@ -118,7 +118,7 @@ Each task should include:
 
 ## BACKLOG.md Integration
 
-After generating the phase task file, update `docs/BACKLOG.md`. This file is the inbound queue for the coordinator-playbook multi-agent execution loop — it is the bridge between ForgeKit phase planning and live agent dispatch.
+After generating the phase task file, update `docs/BACKLOG.md`. This file is the inbound queue for the coordinator-playbook multi-agent execution loop — it is the bridge between Groundwork phase planning and live agent dispatch.
 
 ### File format
 

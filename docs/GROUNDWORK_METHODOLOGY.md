@@ -1,10 +1,10 @@
 ---
-title: "ForgeKit Methodology"
-tags: [forgekit/core]
+title: "Groundwork Methodology"
+tags: [groundwork/core]
 aliases: ["Methodology"]
 ---
 
-# ForgeKit Methodology
+# Groundwork Methodology
 
 A documentation-driven approach to building software projects with AI assistance. This document serves as a prompt/template to bootstrap new projects with a structured, phase-based development methodology.
 
@@ -12,7 +12,7 @@ A documentation-driven approach to building software projects with AI assistance
 
 ## 🎯 Philosophy
 
-**ForgeKit** is about maintaining momentum while building complex software with AI assistance. The key principles:
+**Groundwork** is about maintaining momentum while building complex software with AI assistance. The key principles:
 
 1. **Documentation as Code** - Plans are living documents with checkboxes that track progress
 2. **Phase-Based Development** - Break overwhelming projects into digestible phases

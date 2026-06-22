@@ -1,6 +1,6 @@
-# ForgeKit - Copilot Instructions
+# Groundwork - Copilot Instructions
 
-This project uses **ForgeKit** - a documentation-driven approach for building software with AI assistance.
+This project uses **Groundwork** - a documentation-driven approach for building software with AI assistance.
 
 ## Project Structure
 

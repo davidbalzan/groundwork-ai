@@ -1,6 +1,6 @@
 ---
 title: "Stack Map"
-tags: [forgekit/core]
+tags: [groundwork/core]
 aliases: ["Stack"]
 ---
 
@@ -38,10 +38,10 @@ aliases: ["Stack"]
 
 ## Shared Packages
 
-| Package            | Path               | Files to Change                                        |
-| ------------------ | ------------------ | ------------------------------------------------------ |
-| `@forgekit/shared` | `packages/shared/` | `packages/shared/package.json`, `packages/shared/src/` |
-| `@forgekit/ui`     | `packages/ui/`     | `packages/ui/package.json`, `packages/ui/src/`         |
+| Package              | Path               | Files to Change                                        |
+| -------------------- | ------------------ | ------------------------------------------------------ |
+| `@groundwork/shared` | `packages/shared/` | `packages/shared/package.json`, `packages/shared/src/` |
+| `@groundwork/ui`     | `packages/ui/`     | `packages/ui/package.json`, `packages/ui/src/`         |
 
 ## Developer Tooling
 

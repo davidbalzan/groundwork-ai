@@ -1,14 +1,14 @@
-# ForgeKit - Cursor Rules
+# Groundwork - Cursor Rules
 
 This file provides guidance to Cursor AI when working with code in this repository.
 
 ## Project Overview
 
-**ForgeKit** — An agentic engineering toolkit template with documentation-driven development, persistent AI knowledge capture, and phase-based planning.
+**Groundwork** — An agentic engineering toolkit template with documentation-driven development, persistent AI knowledge capture, and phase-based planning.
 
 ## Development Methodology
 
-This project uses **ForgeKit** — a documentation-driven approach:
+This project uses **Groundwork** — a documentation-driven approach:
 
 1. **Read `docs/PRODUCTION_ROADMAP.md` first** — Single source of truth (Current Focus section at top)
 2. **Check phase tasks** — `docs/phases/phaseN/PHASEN_TASKS.md` for detailed checkboxes
@@ -26,7 +26,7 @@ This project uses **ForgeKit** — a documentation-driven approach:
 ## Monorepo Structure
 
 ```
-forgekit/
+groundwork/
 ├── apps/
 │   ├── web/                    # React 19 + Vite + Tailwind 4
 │   └── api/                    # Hono API server

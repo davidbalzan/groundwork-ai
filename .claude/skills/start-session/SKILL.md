@@ -1,13 +1,13 @@
 ---
 name: start-session
-description: Load project context from ForgeKit docs at the start of a session
+description: Load project context from Groundwork docs at the start of a session
 argument-hint: "[optional: specific area to focus on]"
 allowed-tools: Read, Glob, Grep
 ---
 
-# Start Session - ForgeKit Context Loader
+# Start Session - Groundwork Context Loader
 
-Load instant context from the ForgeKit documentation to understand current project state.
+Load instant context from the Groundwork documentation to understand current project state.
 
 ## Instructions
 

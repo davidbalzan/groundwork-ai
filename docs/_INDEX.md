@@ -1,17 +1,17 @@
 ---
-title: "ForgeKit Vault"
-tags: [forgekit/core]
+title: "Groundwork Vault"
+tags: [groundwork/core]
 aliases: ["MOC", "Map of Content", "Index"]
 ---
 
-# ForgeKit Docs
+# Groundwork Docs
 
-Map of Content for the ForgeKit documentation vault.
+Map of Content for the Groundwork documentation vault.
 
 ## Core
 
-- [ForgeKit Overview](README.md) — Project introduction and getting started
-- [FORGEKIT_METHODOLOGY](FORGEKIT_METHODOLOGY.md) — Full methodology, philosophy, workflow
+- [Groundwork Overview](README.md) — Project introduction and getting started
+- [GROUNDWORK_METHODOLOGY](GROUNDWORK_METHODOLOGY.md) — Full methodology, philosophy, workflow
 - [CURRENT_FOCUS](CURRENT_FOCUS.md) — Active work and session state
 - [STACK_MAP](STACK_MAP.md) — Quick technology reference
 

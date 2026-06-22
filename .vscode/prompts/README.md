@@ -1,6 +1,6 @@
 # VS Code Copilot Prompts
 
-These prompts are the **VS Code Copilot equivalent** of Claude Code skills and Cursor prompts. They help maintain the ForgeKit workflow.
+These prompts are the **VS Code Copilot equivalent** of Claude Code skills and Cursor prompts. They help maintain the Groundwork workflow.
 
 ## How to Use in VS Code Copilot
 

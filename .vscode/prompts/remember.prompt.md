@@ -5,7 +5,7 @@ description: Capture and persist learnings globally across all projects
 
 # Remember - Global Knowledge Capture
 
-**Objective**: Persist learnings to `~/.claude/knowledge/` and sync to ForgeKit repo.
+**Objective**: Persist learnings to `~/.claude/knowledge/` and sync to Groundwork repo.
 
 **Usage**:
 
@@ -19,5 +19,5 @@ description: Capture and persist learnings globally across all projects
 3. Confirm detected category with user before saving
 4. Append to `~/.claude/knowledge/<category>.md` with date: `- [YYYY-MM-DD] <learning>`
 5. Update `~/.claude/knowledge/README.md` index
-6. Sync to ForgeKit repo if inside it
+6. Sync to Groundwork repo if inside it
 7. Confirm to user what was saved and where

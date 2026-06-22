@@ -1,6 +1,6 @@
 # Start Session - Context Loader
 
-**Objective**: Load project context from ForgeKit documentation to understand current state and provide a session summary.
+**Objective**: Load project context from Groundwork documentation to understand current state and provide a session summary.
 
 **Requirements**:
 

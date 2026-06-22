@@ -1,12 +1,12 @@
 ---
 title: "AI Commands Guide"
-tags: [forgekit/reference]
+tags: [groundwork/reference]
 aliases: ["Commands"]
 ---
 
 # AI Assistant Commands Guide
 
-This guide explains how to use the ForgeKit workflow commands across different IDEs.
+This guide explains how to use the Groundwork workflow commands across different IDEs.
 
 ---
 
@@ -379,7 +379,7 @@ docs/templates/PRD_TEMPLATE.md       # PRD template
 .claude/skills/*                     # All skills
 .cursor/commands/*                   # All commands
 .vscode/prompts/*                    # All prompts
-FORGEKIT_METHODOLOGY.md                  # Core methodology
+GROUNDWORK_METHODOLOGY.md                  # Core methodology
 ```
 
 **When to use**: When you want to reuse this template for a new project.

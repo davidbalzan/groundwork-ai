@@ -1,10 +1,10 @@
 # Kickstart - Project Initialization Wizard
 
-Initialize a new project with the complete ForgeKit documentation structure. This prompt guides you through setting up all foundational documents for a well-organized, AI-friendly project.
+Initialize a new project with the complete Groundwork documentation structure. This prompt guides you through setting up all foundational documents for a well-organized, AI-friendly project.
 
 ## Obsidian Format (Required)
 
-All generated files in `docs/` must start with YAML frontmatter (`title`, `tags: [forgekit/core|reference|phase|template]`, `aliases`) and use `[[wikilinks]]` for cross-references. Templates already have frontmatter — preserve it and update the title/aliases to match the project.
+All generated files in `docs/` must start with YAML frontmatter (`title`, `tags: [groundwork/core|reference|phase|template]`, `aliases`) and use `[[wikilinks]]` for cross-references. Templates already have frontmatter — preserve it and update the title/aliases to match the project.
 
 ## Instructions
 

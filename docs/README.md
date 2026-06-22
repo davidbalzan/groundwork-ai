@@ -1,10 +1,10 @@
 ---
-title: "ForgeKit"
-tags: [forgekit/core]
-aliases: ["Home", "ForgeKit"]
+title: "Groundwork"
+tags: [groundwork/core]
+aliases: ["Home", "Groundwork"]
 ---
 
-# ForgeKit
+# Groundwork
 
 > A project template that pairs a production-ready monorepo starter with an AI-driven development workflow — so your AI coding assistant doesn't just write code, it understands your architecture, tracks decisions, and follows a structured plan.
 
@@ -14,9 +14,9 @@ aliases: ["Home", "ForgeKit"]
 
 AI coding assistants (Claude, Copilot, Cursor) are powerful, but they start every session with zero context. They don't know your architecture, your decisions, or what you were working on yesterday. You end up repeating yourself, fighting inconsistency, and losing momentum.
 
-## What ForgeKit Does
+## What Groundwork Does
 
-ForgeKit solves this with two things:
+Groundwork solves this with two things:
 
 1. **A monorepo starter** — React 19, Hono API, TypeScript, Tailwind 4, Turborepo. Everything wired up and running out of the box.
 
@@ -41,7 +41,7 @@ The workflow works across **Claude Code**, **Cursor**, and **VS Code Copilot** �
 #    On GitHub: click "Use this template" → "Create a new repository"
 #    Then clone your new repo:
 git clone <your-repo-url>
-cd forgekit
+cd groundwork
 pnpm install
 
 # 2. Set up environment variables
@@ -59,7 +59,7 @@ docker compose up -d
 
 ### Verify It Works
 
-- Open http://localhost:5173 — you should see the ForgeKit starter page
+- Open http://localhost:5173 — you should see the Groundwork starter page
 - Open http://localhost:3000/api/health — you should get a JSON response with `"status": "ok"`
 
 ### Start Building Your Project
@@ -85,7 +85,7 @@ This walks you through a guided setup that creates all your project documentatio
 ### Monorepo Structure
 
 ```
-forgekit/
+groundwork/
 │
 ├── apps/
 │   ├── web/                         # Frontend application
@@ -136,7 +136,7 @@ forgekit/
 ├── .github/
 │   └── copilot-instructions.md      # GitHub Copilot system instructions
 │
-├── FORGEKIT_METHODOLOGY.md          # The full methodology guide (philosophy + structure)
+├── GROUNDWORK_METHODOLOGY.md          # The full methodology guide (philosophy + structure)
 ├── CURRENT_FOCUS.md                 # Active work context (what's being worked on now)
 ├── turbo.json                       # Turborepo build orchestration
 ├── tsconfig.base.json               # Shared TypeScript config (strict, ES2022)
@@ -176,7 +176,7 @@ pnpm clean        # Clean all build artifacts (.turbo, dist)
 
 ## The AI Workflow
 
-The workflow layer is what makes ForgeKit more than a starter template. It gives your AI assistant a structured process and persistent context.
+The workflow layer is what makes Groundwork more than a starter template. It gives your AI assistant a structured process and persistent context.
 
 ### How It Works
 
@@ -322,12 +322,12 @@ See [docs/COMMANDS.md](COMMANDS.md) for detailed per-IDE usage instructions with
 
 ## Key Documents
 
-| Document                                        | What It Is                                                                                                         |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| [FORGEKIT_METHODOLOGY](FORGEKIT_METHODOLOGY.md) | The complete methodology — philosophy, document structure, workflow patterns, and examples for every document type |
-| [docs/COMMANDS.md](COMMANDS.md)                 | Detailed guide for every AI skill with examples, expected output, and troubleshooting                              |
-| [CURRENT_FOCUS](CURRENT_FOCUS.md)               | Live document showing what's actively being worked on — read by `/start-session`                                   |
-| [docs/DECISIONS.md](DECISIONS.md)               | Architectural Decision Records — consulted before any technology or design choice                                  |
+| Document                                            | What It Is                                                                                                         |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| [GROUNDWORK_METHODOLOGY](GROUNDWORK_METHODOLOGY.md) | The complete methodology — philosophy, document structure, workflow patterns, and examples for every document type |
+| [docs/COMMANDS.md](COMMANDS.md)                     | Detailed guide for every AI skill with examples, expected output, and troubleshooting                              |
+| [CURRENT_FOCUS](CURRENT_FOCUS.md)                   | Live document showing what's actively being worked on — read by `/start-session`                                   |
+| [docs/DECISIONS.md](DECISIONS.md)                   | Architectural Decision Records — consulted before any technology or design choice                                  |
 
 ---
 

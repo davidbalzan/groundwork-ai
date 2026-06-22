@@ -1,6 +1,6 @@
 # Kickstart - Project Initialization
 
-**Objective**: Initialize a new project with the complete ForgeKit documentation structure through a guided discovery process.
+**Objective**: Initialize a new project with the complete Groundwork documentation structure through a guided discovery process.
 
 **Requirements**:
 
@@ -9,7 +9,7 @@
 - Use the templates in `docs/templates/` and `docs/phases/templates/`
 - Create all files with proper cross-references
 
-**Obsidian format (required)**: All generated files in `docs/` must start with YAML frontmatter (`title`, `tags: [forgekit/core|reference|phase|template]`, `aliases`) and use `[[wikilinks]]` for cross-references. Templates already have frontmatter — preserve it and update the title/aliases to match the project.
+**Obsidian format (required)**: All generated files in `docs/` must start with YAML frontmatter (`title`, `tags: [groundwork/core|reference|phase|template]`, `aliases`) and use `[[wikilinks]]` for cross-references. Templates already have frontmatter — preserve it and update the title/aliases to match the project.
 
 ## Stage 1: Project Setup
 

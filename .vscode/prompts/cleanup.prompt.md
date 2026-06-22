@@ -41,7 +41,7 @@ Template infrastructure (never touched):
 
 ```
 README.md                           # Project README
-docs/FORGEKIT_METHODOLOGY.md                 # Core methodology
+docs/GROUNDWORK_METHODOLOGY.md                 # Core methodology
 TOOLS_PREFERENCE.md                 # Tool preferences
 docs/COMMANDS.md                    # Commands guide
 docs/phases/README.md               # Phase overview

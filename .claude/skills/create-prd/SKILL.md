@@ -16,7 +16,7 @@ The generated PRD lives in the `docs/` Obsidian vault. The file MUST:
    ```yaml
    ---
    title: "PRD: [Product Name]"
-   tags: [forgekit/reference, forgekit/prd]
+   tags: [groundwork/reference, groundwork/prd]
    aliases: ["PRD", "[Product Name] PRD"]
    ---
    ```

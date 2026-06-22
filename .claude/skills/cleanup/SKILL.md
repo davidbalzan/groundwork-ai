@@ -38,7 +38,7 @@ These files are kept intact for rebuilding:
 ```
 ALWAYS PRESERVED:
 ├── README.md                        # Project README
-├── docs/FORGEKIT_METHODOLOGY.md              # Core methodology
+├── docs/GROUNDWORK_METHODOLOGY.md              # Core methodology
 │
 ├── docs/
 │   ├── COMMANDS.md                  # Commands guide
@@ -121,7 +121,7 @@ After confirmation:
 
    ## 🔗 Key Files
 
-   - Methodology: `docs/FORGEKIT_METHODOLOGY.md`
+   - Methodology: `docs/GROUNDWORK_METHODOLOGY.md`
    - Commands: `docs/COMMANDS.md`
 
    ## 📝 Session Notes

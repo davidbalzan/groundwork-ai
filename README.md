@@ -1,4 +1,4 @@
-# ForgeKit
+# Groundwork
 
 > A monorepo starter paired with an AI-driven development workflow. Your AI assistant doesn't just write code — it understands your architecture, tracks decisions, and follows a structured plan across sessions.
 
@@ -8,7 +8,7 @@
 
 **AI workflow layer** — 11 skills (`/kickstart`, `/plan-phase`, `/log-decision`, `/update-focus`, etc.) mirrored across **Claude Code**, **Cursor**, and **VS Code Copilot**. Doc templates, knowledge base, and persistent session context so your assistant loads the full picture each time.
 
-**Obsidian-ready docs** — All documentation lives in `docs/` as an Obsidian vault with YAML frontmatter, `[[wikilinks]]`, and graph view. Skills generate new docs in the same format, so every project you build from ForgeKit gets a live knowledge graph out of the box.
+**Obsidian-ready docs** — All documentation lives in `docs/` as an Obsidian vault with YAML frontmatter, `[[wikilinks]]`, and graph view. Skills generate new docs in the same format, so every project you build from Groundwork gets a live knowledge graph out of the box.
 
 ## Quick start
 
@@ -67,7 +67,7 @@ The vault's home note is **`docs/_INDEX.md`**. Every generated doc is cross-link
 ├── docs/             # ← Obsidian vault (open as vault root)
 │   ├── _INDEX.md     # Home / Map of Content
 │   ├── README.md     # Full project README (detailed quick start)
-│   ├── FORGEKIT_METHODOLOGY.md  # Philosophy & workflow
+│   ├── GROUNDWORK_METHODOLOGY.md  # Philosophy & workflow
 │   ├── CURRENT_FOCUS.md         # Active work
 │   ├── DECISIONS.md             # ADRs
 │   ├── COMMANDS.md              # Skill reference
@@ -83,6 +83,6 @@ The vault's home note is **`docs/_INDEX.md`**. Every generated doc is cross-link
 
 **Full README with detailed setup, troubleshooting, and skill walkthroughs:** [`docs/README.md`](./docs/README.md)
 
-**Methodology (why it's built this way):** [`docs/FORGEKIT_METHODOLOGY.md`](./docs/FORGEKIT_METHODOLOGY.md)
+**Methodology (why it's built this way):** [`docs/GROUNDWORK_METHODOLOGY.md`](./docs/GROUNDWORK_METHODOLOGY.md)
 
 **Skills reference:** [`docs/COMMANDS.md`](./docs/COMMANDS.md)

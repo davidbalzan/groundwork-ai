@@ -1,6 +1,6 @@
 ---
 title: "PRD Template"
-tags: [forgekit/template]
+tags: [groundwork/template]
 aliases: []
 ---
 

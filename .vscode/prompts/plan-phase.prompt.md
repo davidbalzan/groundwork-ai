@@ -5,11 +5,11 @@ description: Generate a new phase task document using the project template
 
 # Plan Phase - Task Document Generator
 
-Generate a comprehensive phase task document following the ForgeKit methodology.
+Generate a comprehensive phase task document following the Groundwork methodology.
 
 ## Obsidian Format (Required)
 
-Generated phase files (`docs/phases/phaseN/README.md` and `PHASEN_TASKS.md`) must start with YAML frontmatter (`title`, `tags: [forgekit/phase]`, `aliases`) and use `[[wikilinks]]` when referencing `[[PRODUCTION_ROADMAP]]`, `[[ARCHITECTURE_GUIDE]]`, `[[CURRENT_FOCUS]]`, `[[DECISIONS]]`, etc.
+Generated phase files (`docs/phases/phaseN/README.md` and `PHASEN_TASKS.md`) must start with YAML frontmatter (`title`, `tags: [groundwork/phase]`, `aliases`) and use `[[wikilinks]]` when referencing `[[PRODUCTION_ROADMAP]]`, `[[ARCHITECTURE_GUIDE]]`, `[[CURRENT_FOCUS]]`, `[[DECISIONS]]`, etc.
 
 ## Instructions
 

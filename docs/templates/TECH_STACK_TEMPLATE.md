@@ -1,6 +1,6 @@
 ---
 title: "Tech Stack Template"
-tags: [forgekit/template]
+tags: [groundwork/template]
 aliases: []
 ---
 

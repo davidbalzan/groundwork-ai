@@ -1,6 +1,6 @@
 ---
 title: "Task Template"
-tags: [forgekit/template]
+tags: [groundwork/template]
 aliases: []
 ---
 

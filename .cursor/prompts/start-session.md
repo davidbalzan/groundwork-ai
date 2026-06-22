@@ -1,6 +1,6 @@
-# Start Session - ForgeKit Context Loader
+# Start Session - Groundwork Context Loader
 
-Load instant context from the ForgeKit documentation to understand current project state.
+Load instant context from the Groundwork documentation to understand current project state.
 
 ## Instructions
 
@@ -59,6 +59,7 @@ Provide a concise summary:
 ## Decision Relevance
 
 When surfacing decisions:
+
 - Show ADRs from the last 30 days
 - Highlight any decisions related to the current phase
 - Note any "Proposed" decisions awaiting confirmation

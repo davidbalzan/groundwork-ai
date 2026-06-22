@@ -1,12 +1,12 @@
 ---
 name: kickstart
-description: Initialize a new project with ForgeKit documentation structure
+description: Initialize a new project with Groundwork documentation structure
 argument-hint: "<project name>"
 ---
 
 # Kickstart - Project Initialization Wizard
 
-Initialize a new project with the complete ForgeKit documentation structure. This skill guides you through setting up all foundational documents for a well-organized, AI-friendly project.
+Initialize a new project with the complete Groundwork documentation structure. This skill guides you through setting up all foundational documents for a well-organized, AI-friendly project.
 
 ## Obsidian Format (Required)
 
@@ -16,7 +16,7 @@ All generated files under `docs/` live in an Obsidian vault. Every generated fil
    ```yaml
    ---
    title: "Descriptive Title"
-   tags: [forgekit/core] # or forgekit/reference, forgekit/phase, forgekit/template
+   tags: [groundwork/core] # or groundwork/reference, groundwork/phase, groundwork/template
    aliases: ["Short Name"]
    ---
    ```
@@ -211,7 +211,7 @@ Provide a summary of everything created:
 
 ## Logging Convention (Inherited from Template)
 
-Every project derived from ForgeKit ships with structured logging out of the box:
+Every project derived from Groundwork ships with structured logging out of the box:
 
 - **Server (`apps/api`)**: pino writes NDJSON to console **and** `logs/api.log` at the repo root.
 - **Browser (`apps/web`)**: a tiny logger in `apps/web/src/logger.ts` mirrors to `console` and POSTs batched entries to `/api/logs`, which pino re-emits with `source: "client"`.

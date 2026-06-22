@@ -6,7 +6,7 @@ argument-hint: "[category:] <learning>"
 
 # Remember - Global Knowledge Capture
 
-Persist learnings to `~/.claude/knowledge/` and sync to ForgeKit repo.
+Persist learnings to `~/.claude/knowledge/` and sync to Groundwork repo.
 
 ## Usage
 
@@ -63,14 +63,14 @@ Persist learnings to `~/.claude/knowledge/` and sync to ForgeKit repo.
 5. **Update the index**
    - Ensure `~/.claude/knowledge/README.md` lists all categories
 
-6. **Sync to ForgeKit** (if configured)
-   - Copy knowledge directory to local ForgeKit clone
+6. **Sync to Groundwork** (if configured)
+   - Copy knowledge directory to local Groundwork clone
    - Commit and push changes
-   - ForgeKit path: auto-detected via `$(git rev-parse --show-toplevel)` or `$FORGEKIT_PATH` env var
+   - Groundwork path: auto-detected via `$(git rev-parse --show-toplevel)` or `$GROUNDWORK_PATH` env var
 
 7. **Confirm to user**
    - Show what was saved and where
-   - Indicate if ForgeKit sync succeeded
+   - Indicate if Groundwork sync succeeded
 
 ## Knowledge File Format
 
@@ -102,20 +102,20 @@ Reference these files for domain-specific learnings.
 | testing    | testing.md    | Testing strategies and tools      |
 ```
 
-## ForgeKit Sync
+## Groundwork Sync
 
-After saving locally, sync to ForgeKit if inside the repo:
+After saving locally, sync to Groundwork if inside the repo:
 
 ```bash
 # Detect repo root (works from any subdirectory)
-FORGEKIT_ROOT="${FORGEKIT_PATH:-$(git rev-parse --show-toplevel 2>/dev/null)}"
+GROUNDWORK_ROOT="${GROUNDWORK_PATH:-$(git rev-parse --show-toplevel 2>/dev/null)}"
 
-if [ -n "$FORGEKIT_ROOT" ]; then
-  # Copy knowledge to ForgeKit
-  cp -r ~/.claude/knowledge "$FORGEKIT_ROOT/.claude/"
+if [ -n "$GROUNDWORK_ROOT" ]; then
+  # Copy knowledge to Groundwork
+  cp -r ~/.claude/knowledge "$GROUNDWORK_ROOT/.claude/"
 
   # Commit and push
-  cd "$FORGEKIT_ROOT"
+  cd "$GROUNDWORK_ROOT"
   git add .claude/knowledge
   git commit -m "knowledge: Update from $(hostname)"
   git push

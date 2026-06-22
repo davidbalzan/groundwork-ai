@@ -1,6 +1,6 @@
 ---
 title: "Architecture Guide Template"
-tags: [forgekit/template]
+tags: [groundwork/template]
 aliases: ["Architecture Template"]
 ---
 

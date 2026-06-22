@@ -1,6 +1,6 @@
 ---
 title: "Architectural Decisions"
-tags: [forgekit/reference]
+tags: [groundwork/reference]
 aliases: ["DECISIONS", "ADR", "Decision Log"]
 ---
 

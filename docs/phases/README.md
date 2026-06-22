@@ -10,7 +10,7 @@ aliases: ["Phases"]
 
 Each phase has its own folder with:
 
-- [[README]] — Phase overview and quick reference
+- [README](README.md) — Phase overview and quick reference
 - `PHASEN_TASKS.md` — Detailed task breakdown with checklists
 
 Use `/plan-phase` to generate a new phase.

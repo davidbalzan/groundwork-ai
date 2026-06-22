@@ -201,7 +201,7 @@ The workflow layer is what makes ForgeKit more than a starter template. It gives
 
 ### Skills Reference
 
-These skills work as slash commands in Claude Code, Cursor, and VS Code Copilot. See [[COMMANDS|docs/COMMANDS.md]] for detailed usage with examples.
+These skills work as slash commands in Claude Code, Cursor, and VS Code Copilot. See [docs/COMMANDS.md](COMMANDS.md) for detailed usage with examples.
 
 | Skill            | What It Does                                                                                                                                                                            | When to Use                               |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
@@ -240,16 +240,16 @@ These files are updated via `/remember` and read by `/start-session`. They give 
 
 The `/kickstart` skill generates project documentation from structured templates in `docs/templates/`. Each template has rich guided placeholders that tell you (and the AI) exactly what information belongs in each section:
 
-| Template                        | Generates                                | Purpose                                                                |
-| ------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------- |
-| [[TECH_STACK_TEMPLATE]]         | [[TECH_STACK]]                           | Technology choices with versions, rationale, and upgrade paths         |
-| [[ARCHITECTURE_GUIDE_TEMPLATE]] | [[ARCHITECTURE_GUIDE]]                   | System design, directory structure, decision rationale, best practices |
-| [[PRODUCTION_ROADMAP_TEMPLATE]] | [[PRODUCTION_ROADMAP]]                   | Phase overview, current state assessment, success metrics              |
-| [[DESIGN_SYSTEM_TEMPLATE]]      | [[DESIGN_SYSTEM]]                        | Colors, typography, spacing, component patterns, accessibility         |
-| [[PHASES_README_TEMPLATE]]      | `docs/phases/README.md`                  | Phase navigation, cross-phase dependencies, progress tracking          |
-| [[PHASE_README_TEMPLATE]]       | `docs/phases/phase[N]/README.md`         | Individual phase goals, deliverables, success criteria                 |
-| [[PRD_TEMPLATE]]                | [[PRD]]                                  | Product requirements, personas, user stories                           |
-| [[TASK_TEMPLATE]]               | `docs/phases/phase[N]/PHASE[N]_TASKS.md` | Detailed task breakdown with sub-steps and rollback plans              |
+| Template                                                                | Generates                                | Purpose                                                                |
+| ----------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------- |
+| [TECH_STACK_TEMPLATE](templates/TECH_STACK_TEMPLATE.md)                 | `TECH_STACK`                             | Technology choices with versions, rationale, and upgrade paths         |
+| [ARCHITECTURE_GUIDE_TEMPLATE](templates/ARCHITECTURE_GUIDE_TEMPLATE.md) | `ARCHITECTURE_GUIDE`                     | System design, directory structure, decision rationale, best practices |
+| [PRODUCTION_ROADMAP_TEMPLATE](templates/PRODUCTION_ROADMAP_TEMPLATE.md) | `PRODUCTION_ROADMAP`                     | Phase overview, current state assessment, success metrics              |
+| [DESIGN_SYSTEM_TEMPLATE](templates/DESIGN_SYSTEM_TEMPLATE.md)           | `DESIGN_SYSTEM`                          | Colors, typography, spacing, component patterns, accessibility         |
+| [PHASES_README_TEMPLATE](templates/PHASES_README_TEMPLATE.md)           | `docs/phases/README.md`                  | Phase navigation, cross-phase dependencies, progress tracking          |
+| [PHASE_README_TEMPLATE](templates/PHASE_README_TEMPLATE.md)             | `docs/phases/phase[N]/README.md`         | Individual phase goals, deliverables, success criteria                 |
+| [PRD_TEMPLATE](templates/PRD_TEMPLATE.md)                               | `PRD`                                    | Product requirements, personas, user stories                           |
+| [TASK_TEMPLATE](phases/templates/TASK_TEMPLATE.md)                      | `docs/phases/phase[N]/PHASE[N]_TASKS.md` | Detailed task breakdown with sub-steps and rollback plans              |
 
 ---
 
@@ -275,7 +275,7 @@ This interactive flow asks about your tech choices, architecture decisions, proj
 
 The starter ships with React + Hono + PostgreSQL, but the AI workflow layer is tech-agnostic. You can replace any technology:
 
-- **Different frontend** — Replace `apps/web/` contents, update [[TECH_STACK]]
+- **Different frontend** — Replace `apps/web/` contents, update `TECH_STACK`
 - **Different backend** — Replace `apps/api/` contents, log a `/log-decision` for the change
 - **Different database** — Update `docker-compose.yml`, update tech stack docs
 - **Add packages** — Create new directories under `packages/`, add to `pnpm-workspace.yaml`
@@ -316,18 +316,18 @@ System-level instructions are also configured:
 - `.github/copilot-instructions.md` — GitHub Copilot system prompt
 - `.claude/CLAUDE.md` — Claude Code project instructions
 
-See [[COMMANDS|docs/COMMANDS.md]] for detailed per-IDE usage instructions with examples.
+See [docs/COMMANDS.md](COMMANDS.md) for detailed per-IDE usage instructions with examples.
 
 ---
 
 ## Key Documents
 
-| Document                 | What It Is                                                                                                         |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| [[FORGEKIT_METHODOLOGY]] | The complete methodology — philosophy, document structure, workflow patterns, and examples for every document type |
-| [[COMMANDS               | docs/COMMANDS.md]]                                                                                                 | Detailed guide for every AI skill with examples, expected output, and troubleshooting |
-| [[CURRENT_FOCUS]]        | Live document showing what's actively being worked on — read by `/start-session`                                   |
-| [[DECISIONS              | docs/DECISIONS.md]]                                                                                                | Architectural Decision Records — consulted before any technology or design choice     |
+| Document                                        | What It Is                                                                                                         |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| [FORGEKIT_METHODOLOGY](FORGEKIT_METHODOLOGY.md) | The complete methodology — philosophy, document structure, workflow patterns, and examples for every document type |
+| [docs/COMMANDS.md](COMMANDS.md)                 | Detailed guide for every AI skill with examples, expected output, and troubleshooting                              |
+| [CURRENT_FOCUS](CURRENT_FOCUS.md)               | Live document showing what's actively being worked on — read by `/start-session`                                   |
+| [docs/DECISIONS.md](DECISIONS.md)               | Architectural Decision Records — consulted before any technology or design choice                                  |
 
 ---
 

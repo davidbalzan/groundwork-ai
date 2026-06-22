@@ -33,9 +33,9 @@ aliases: ["Focus", "Current Work"]
 
 ## Key Files
 
-- Methodology: [[FORGEKIT_METHODOLOGY]]
-- Commands: [[COMMANDS]]
-- Decisions: [[DECISIONS]]
+- Methodology: [FORGEKIT_METHODOLOGY](FORGEKIT_METHODOLOGY.md)
+- Commands: [COMMANDS](COMMANDS.md)
+- Decisions: [DECISIONS](DECISIONS.md)
 
 ---
 

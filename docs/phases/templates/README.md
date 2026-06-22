@@ -12,7 +12,7 @@ This directory contains reusable templates for planning documents, tasks, and sp
 
 ### Task Template
 
-**File**: [[TASK_TEMPLATE]]  
+**File**: [TASK_TEMPLATE](phases/templates/TASK_TEMPLATE.md)  
 **Purpose**: Standard template for task planning and tracking
 
 Use this template when:
@@ -32,7 +32,7 @@ Sections included:
 
 ### Task Template Prompt
 
-**File**: [[task_template_prompt]]  
+**File**: [task_template_prompt](phases/templates/task_template_prompt.md)  
 **Purpose**: AI assistant prompt for generating task documents
 
 Use this when:
@@ -59,5 +59,5 @@ When creating new templates:
 
 ## Navigation
 
-- [[README|Back to Phases]]
+- [Back to Phases](README.md)
 - Task Examples - See completed tasks using these templates (create a `completed/` directory as needed)

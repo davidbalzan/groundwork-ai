@@ -13,7 +13,7 @@ David. The coordinator drains the top unblocked item and checks it off with a PR
 
 ## Queue
 
-- [ ] (P1) Phase 1: [Phase Name] — see [[phases/phase1/PHASE1_TASKS]] · acceptance: all Phase 1 success criteria met
+- [ ] (P1) Phase 1: [Phase Name] — see `phases/phase1/PHASE1_TASKS` · acceptance: all Phase 1 success criteria met
 
 ## Done
 

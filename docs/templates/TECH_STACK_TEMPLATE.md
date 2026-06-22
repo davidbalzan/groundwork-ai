@@ -194,6 +194,6 @@ aliases: []
 
 ## 🔗 Related Documents
 
-- **[[ARCHITECTURE_GUIDE|Architecture Guide]]** - Why these technologies work together
-- **[[DECISIONS|Decisions Log]]** - ADRs for each major technology choice
-- **[[DESIGN_SYSTEM|Design System]]** - Visual language built on this stack
+- **`Architecture Guide`** - Why these technologies work together
+- **[Decisions Log](DECISIONS.md)** - ADRs for each major technology choice
+- **`Design System`** - Visual language built on this stack

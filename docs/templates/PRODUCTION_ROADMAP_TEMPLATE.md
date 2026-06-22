@@ -159,8 +159,8 @@ aliases: ["Roadmap Template"]
 
 ## 🔗 Related Documents
 
-- **[[TECH_STACK|Tech Stack]]** - Technology choices and versions
-- **[[ARCHITECTURE_GUIDE|Architecture Guide]]** - System design and patterns
-- **[[DECISIONS|Decisions Log]]** - Architectural Decision Records
+- **`Tech Stack`** - Technology choices and versions
+- **`Architecture Guide`** - System design and patterns
+- **[Decisions Log](DECISIONS.md)** - Architectural Decision Records
 - **[Phase Details](./phases/)** - Detailed phase task breakdowns with checklists
-- **[[CURRENT_FOCUS|Current Focus]]** - What's actively being worked on right now
+- **[Current Focus](CURRENT_FOCUS.md)** - What's actively being worked on right now

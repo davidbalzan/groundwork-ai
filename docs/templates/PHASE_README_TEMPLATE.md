@@ -133,7 +133,7 @@ cat CURRENT_FOCUS.md
 - [ ] Read the detailed task plan (PHASE[N]\_TASKS.md) — understand the full scope
 - [ ] Ensure all **Required** dependencies are met
 - [ ] Confirm development environment is working (`pnpm dev` starts without errors)
-- [ ] Review relevant ADRs in [[DECISIONS]] that affect this phase
+- [ ] Review relevant ADRs in [DECISIONS](DECISIONS.md) that affect this phase
 
 ---
 

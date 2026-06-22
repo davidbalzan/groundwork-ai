@@ -133,10 +133,10 @@ features/
 
 ## 🔗 Related Documents
 
-- **[[DECISIONS|Decisions Log]]** - Detailed ADRs for every major architectural choice
-- **[[TECH_STACK|Tech Stack]]** - Technology choices with versions, rationale, and upgrade risks
-- **[[CURRENT_FOCUS|Current Focus]]** - What's actively being worked on and current phase
-- **[[DESIGN_SYSTEM|Design System]]** - Visual language and component patterns (if frontend)
+- **[Decisions Log](DECISIONS.md)** - Detailed ADRs for every major architectural choice
+- **`Tech Stack`** - Technology choices with versions, rationale, and upgrade risks
+- **[Current Focus](CURRENT_FOCUS.md)** - What's actively being worked on and current phase
+- **`Design System`** - Visual language and component patterns (if frontend)
 
 ---
 
@@ -177,8 +177,8 @@ features/
 > Quick reference for "what do I use for X?" questions. Links to detailed ADRs for full context.
 
 | Need                              | Current Solution                               | Effort | When to Revisit                                                    | ADR Reference                   |
-| --------------------------------- | ---------------------------------------------- | ------ | ------------------------------------------------------------------ | ------------------------------- | --------- |
-| [Need — e.g., "State management"] | [Current — e.g., "React Context + useReducer"] | Low    | [Trigger — e.g., "When state logic spans > 5 components"]          | [[DECISIONS#adr-xxx             | ADR-XXX]] |
+| --------------------------------- | ---------------------------------------------- | ------ | ------------------------------------------------------------------ | ------------------------------- |
+| [Need — e.g., "State management"] | [Current — e.g., "React Context + useReducer"] | Low    | [Trigger — e.g., "When state logic spans > 5 components"]          | [ADR-XXX](DECISIONS.md#adr-xxx) |
 | [Need — e.g., "API caching"]      | [Current — e.g., "No caching"]                 | Medium | [Trigger — e.g., "When same data fetched > 3 times/session"]       | [ADR link or "Not yet decided"] |
 | [Need — e.g., "Search"]           | [Current — e.g., "SQL LIKE queries"]           | High   | [Trigger — e.g., "When full-text search needed or > 100k records"] | [ADR link or "Not yet decided"] |
 

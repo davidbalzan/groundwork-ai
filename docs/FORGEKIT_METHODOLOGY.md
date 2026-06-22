@@ -131,7 +131,7 @@ features/
 
 ## 📋 Core Document Types
 
-### 1. Production Roadmap ([[PRODUCTION_ROADMAP]])
+### 1. Production Roadmap (`PRODUCTION_ROADMAP`)
 
 **Purpose**: The master document that provides a bird's-eye view of the entire journey from POC to production. This is the first document stakeholders read.
 
@@ -361,8 +361,8 @@ project/
 
 ## Related Documents
 
-- **[[DECISIONS|Decisions Log]]** - Detailed ADRs for major choices
-- **[[CURRENT_FOCUS|Current Focus]]** - What's actively being worked on
+- **[Decisions Log](DECISIONS.md)** - Detailed ADRs for major choices
+- **[Current Focus](CURRENT_FOCUS.md)** - What's actively being worked on
 
 ## Upgrade Paths
 
@@ -632,7 +632,7 @@ className = "bg-gray-100 text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-200";
 
 ## 📂 Phase Organization
 Each phase has its own folder with:
-- [[README]] - Phase overview and quick reference
+- [README](README.md) - Phase overview and quick reference
 - `PHASE[N]_TASKS.md` - Detailed task breakdown with checklists
 
 ## 🗺️ Roadmap Overview
@@ -1097,14 +1097,14 @@ npm init -y
 
 ### 2. Create Core Documents
 
-- [ ] [[README]] - Project overview, quick start
-- [ ] [[CURRENT_FOCUS]] - Quick reference for active work (AI session handoffs)
-- [ ] [[README]] - Documentation index
-- [ ] [[TECH_STACK]] - Technology choices & versions
-- [ ] [[ARCHITECTURE_GUIDE]] - Why decisions were made, patterns
-- [ ] [[DECISIONS]] - Architectural Decision Records (ADRs)
-- [ ] [[DESIGN_SYSTEM]] - Colors, typography, components
-- [ ] [[PRODUCTION_ROADMAP]] - High-level roadmap
+- [ ] [README](README.md) - Project overview, quick start
+- [ ] [CURRENT_FOCUS](CURRENT_FOCUS.md) - Quick reference for active work (AI session handoffs)
+- [ ] [README](README.md) - Documentation index
+- [ ] `TECH_STACK` - Technology choices & versions
+- [ ] `ARCHITECTURE_GUIDE` - Why decisions were made, patterns
+- [ ] [DECISIONS](DECISIONS.md) - Architectural Decision Records (ADRs)
+- [ ] `DESIGN_SYSTEM` - Colors, typography, components
+- [ ] `PRODUCTION_ROADMAP` - High-level roadmap
 - [ ] `docs/phases/README.md` - Phase overview
 
 ### 3. Define Your Phases
@@ -1150,7 +1150,7 @@ For each phase:
 1. Verify all checkboxes in `PHASEN_TASKS.md`
 2. Update phase README status
 3. Update `phases/README.md` progress
-4. Update [[PRODUCTION_ROADMAP]] status
+4. Update `PRODUCTION_ROADMAP` status
 5. Create branch for next phase
 6. Begin next phase planning
 

@@ -164,11 +164,11 @@ Available prompts:
 **What it does**:
 
 1. Creates folder structure (`docs/`, `apps/web/`, `apps/api/`, `packages/shared/`)
-2. Guides through tech stack selection → [[TECH_STACK]]
-3. Records architecture decisions → [[ARCHITECTURE_GUIDE]], [[DECISIONS]]
-4. Sets up phase structure → [[PRODUCTION_ROADMAP]], `phases/`
-5. Initializes focus tracking → [[CURRENT_FOCUS]]
-6. Optionally creates design system → [[DESIGN_SYSTEM]]
+2. Guides through tech stack selection → `TECH_STACK`
+3. Records architecture decisions → `ARCHITECTURE_GUIDE`, [DECISIONS](DECISIONS.md)
+4. Sets up phase structure → `PRODUCTION_ROADMAP`, `phases/`
+5. Initializes focus tracking → [CURRENT_FOCUS](CURRENT_FOCUS.md)
+6. Optionally creates design system → `DESIGN_SYSTEM`
 
 **When to use**: Starting a brand new project from scratch.
 
@@ -201,7 +201,7 @@ Available prompts:
 /create-prd "User authentication system with OAuth support"
 ```
 
-**Output**: [[PRD]] or `docs/PRD_[ProductName].md`
+**Output**: `PRD` or `docs/PRD_[ProductName].md`
 
 ---
 
@@ -211,7 +211,7 @@ Available prompts:
 
 **What it does**:
 
-1. Reads [[CURRENT_FOCUS]] for active work
+1. Reads [CURRENT_FOCUS](CURRENT_FOCUS.md) for active work
 2. Reviews phase progress from roadmap
 3. Checks recent decisions that affect current work
 4. Summarizes blockers and next steps
@@ -275,13 +275,13 @@ Available prompts:
 /log-decision "Use Redis for session caching"
 ```
 
-**Output**: New ADR entry in [[DECISIONS]]
+**Output**: New ADR entry in [DECISIONS](DECISIONS.md)
 
 ---
 
 ### `/update-focus`
 
-**Purpose**: Update the current work status in [[CURRENT_FOCUS]].
+**Purpose**: Update the current work status in [CURRENT_FOCUS](CURRENT_FOCUS.md).
 
 **What it does**:
 

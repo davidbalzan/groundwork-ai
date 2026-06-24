@@ -14,11 +14,12 @@ ADRs capture context that's easy to forget: why we chose X over Y, what constrai
 
 ## Decision Log
 
-| ID      | Decision                                                        | Status   | Date       |
-| ------- | --------------------------------------------------------------- | -------- | ---------- |
-| ADR-001 | [Monorepo with Turborepo](#adr-001-monorepo-with-turborepo)     | Accepted | 2026-02-20 |
-| ADR-002 | [React + Vite for Frontend](#adr-002-react--vite-for-frontend)  | Accepted | 2026-02-20 |
-| ADR-003 | [Node.js + Hono for Backend](#adr-003-nodejs--hono-for-backend) | Accepted | 2026-02-20 |
+| ID      | Decision                                                              | Status   | Date       |
+| ------- | --------------------------------------------------------------------- | -------- | ---------- |
+| ADR-001 | [Monorepo with Turborepo](#adr-001-monorepo-with-turborepo)           | Accepted | 2026-02-20 |
+| ADR-002 | [React + Vite for Frontend](#adr-002-react--vite-for-frontend)        | Accepted | 2026-02-20 |
+| ADR-003 | [Node.js + Hono for Backend](#adr-003-nodejs--hono-for-backend)       | Accepted | 2026-02-20 |
+| ADR-004 | [ESLint 9 pinned (flat config)](#adr-004-eslint-9-pinned-flat-config) | Accepted | 2026-06-24 |
 
 ---
 
@@ -85,7 +86,7 @@ Use React 19 with Vite as the build tool and Tailwind CSS 4 for styling.
 **Negative:**
 
 - Bundle size consideration for production
-- Tailwind 4 is relatively new (CSS-based config)
+- Tailwind's CSS-first config (no `tailwind.config.js`) differs from v3 habits
 
 ### Alternatives Considered
 
@@ -131,6 +132,41 @@ Use Node.js runtime with Hono web framework.
 | Express     | Huge ecosystem, familiar | Legacy patterns, no native TypeScript | Dated patterns                     |
 | Fastify     | Fast, good TS support    | More complex plugin system            | Heavier than needed                |
 | Bun + Hono  | Better performance       | Bun still evolving, edge cases        | Node.js more stable for production |
+
+---
+
+## ADR-004: ESLint 9 pinned (flat config)
+
+**Status**: Accepted
+**Date**: 2026-06-24
+
+### Context
+
+The monorepo lints with ESLint's flat config (`eslint.config.js`) and the React plugins (`eslint-plugin-react`, `eslint-plugin-react-hooks`). When refreshing dependencies, ESLint 10 is the latest major, but the latest published `eslint-plugin-react` (7.37.5) still calls the `context.getFilename()` API that ESLint 10 removed — it crashes at lint time with `TypeError: contextOrFilename.getFilename is not a function`. The plugin's declared peer range stops at ESLint `9.7`.
+
+### Decision
+
+Pin `eslint` and `@eslint/js` to the `9.x` line (currently 9.39.x) until `eslint-plugin-react` ships an ESLint 10-compatible release. All other tooling (TypeScript 6, Vite 8, Vitest 4, Zod 4) is on its latest major.
+
+### Consequences
+
+**Positive:**
+
+- Lint runs clean across all four workspace projects
+- Flat config (`eslint.config.js`) is already the modern format, so the migration to ESLint 10 will be a version bump, not a rewrite
+
+**Negative:**
+
+- One major version behind on ESLint until the React plugin catches up
+- A reminder/check is needed before bumping ESLint to 10 (verify `eslint-plugin-react` peer range first)
+
+### Alternatives Considered
+
+| Alternative                            | Pros                       | Cons                                          | Why Not                                           |
+| -------------------------------------- | -------------------------- | --------------------------------------------- | ------------------------------------------------- |
+| ESLint 10 + drop `eslint-plugin-react` | Latest ESLint              | Lose React-specific rules (JSX, display-name) | Too much rule coverage lost                       |
+| ESLint 10 + patch the plugin           | Latest ESLint, keep rules  | Maintain a fork/patch, fragile                | Not worth the upkeep for a starter template       |
+| Pin ESLint 9 (chosen)                  | Clean lint, no maintenance | One major behind                              | Lowest risk; trivial to revisit when plugin ships |
 
 ---
 

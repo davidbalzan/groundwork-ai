@@ -4,7 +4,7 @@
 
 ## What's in the box
 
-**Monorepo starter** — React 19 + Vite, Hono API, TypeScript 5, Tailwind 4, Turborepo, pnpm workspaces, Vitest, ESLint, Prettier, Husky, Docker Compose for Postgres.
+**Monorepo starter** — React 19 + Vite, Hono API, TypeScript 6, Tailwind 4, Turborepo, pnpm workspaces, Vitest, ESLint, Prettier, Husky, Docker Compose for Postgres.
 
 **AI workflow layer** — 11 skills (`/kickstart`, `/plan-phase`, `/log-decision`, `/update-focus`, etc.) mirrored across **Claude Code**, **Cursor**, and **VS Code Copilot**. Doc templates, knowledge base, and persistent session context so your assistant loads the full picture each time.
 

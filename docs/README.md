@@ -91,7 +91,7 @@ groundwork/
 │   ├── web/                         # Frontend application
 │   │   ├── src/App.tsx              # React 19 starter shell
 │   │   ├── src/index.css            # Tailwind 4 with dark/light design tokens
-│   │   └── vite.config.ts           # Vite 6 with API proxy to :3000
+│   │   └── vite.config.ts           # Vite 8 with API proxy to :3000
 │   │
 │   └── api/                         # Backend application
 │       └── src/index.ts             # Hono server with CORS, logging, error handling

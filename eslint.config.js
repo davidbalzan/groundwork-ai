@@ -24,7 +24,10 @@ export default tseslint.config(
     },
     settings: {
       react: {
-        version: "detect",
+        // Pinned explicitly instead of "detect": eslint-plugin-react 7.37.5
+        // (latest) crashes on ESLint 10's new context API during version
+        // auto-detection. Setting the version skips that broken code path.
+        version: "19.2.0",
       },
     },
     rules: {

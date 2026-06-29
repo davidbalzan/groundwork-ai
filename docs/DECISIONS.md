@@ -14,12 +14,13 @@ ADRs capture context that's easy to forget: why we chose X over Y, what constrai
 
 ## Decision Log
 
-| ID      | Decision                                                              | Status   | Date       |
-| ------- | --------------------------------------------------------------------- | -------- | ---------- |
-| ADR-001 | [Monorepo with Turborepo](#adr-001-monorepo-with-turborepo)           | Accepted | 2026-02-20 |
-| ADR-002 | [React + Vite for Frontend](#adr-002-react--vite-for-frontend)        | Accepted | 2026-02-20 |
-| ADR-003 | [Node.js + Hono for Backend](#adr-003-nodejs--hono-for-backend)       | Accepted | 2026-02-20 |
-| ADR-004 | [ESLint 9 pinned (flat config)](#adr-004-eslint-9-pinned-flat-config) | Accepted | 2026-06-24 |
+| ID      | Decision                                                                              | Status                | Date       |
+| ------- | ------------------------------------------------------------------------------------- | --------------------- | ---------- |
+| ADR-001 | [Monorepo with Turborepo](#adr-001-monorepo-with-turborepo)                           | Accepted              | 2026-02-20 |
+| ADR-002 | [React + Vite for Frontend](#adr-002-react--vite-for-frontend)                        | Accepted              | 2026-02-20 |
+| ADR-003 | [Node.js + Hono for Backend](#adr-003-nodejs--hono-for-backend)                       | Accepted              | 2026-02-20 |
+| ADR-004 | [ESLint 9 pinned (flat config)](#adr-004-eslint-9-pinned-flat-config)                 | Superseded by ADR-005 | 2026-06-24 |
+| ADR-005 | [ESLint 10 via explicit React version](#adr-005-eslint-10-via-explicit-react-version) | Accepted              | 2026-06-29 |
 
 ---
 
@@ -137,7 +138,7 @@ Use Node.js runtime with Hono web framework.
 
 ## ADR-004: ESLint 9 pinned (flat config)
 
-**Status**: Accepted
+**Status**: Superseded by [ADR-005](#adr-005-eslint-10-via-explicit-react-version)
 **Date**: 2026-06-24
 
 ### Context
@@ -167,6 +168,51 @@ Pin `eslint` and `@eslint/js` to the `9.x` line (currently 9.39.x) until `eslint
 | ESLint 10 + drop `eslint-plugin-react` | Latest ESLint              | Lose React-specific rules (JSX, display-name) | Too much rule coverage lost                       |
 | ESLint 10 + patch the plugin           | Latest ESLint, keep rules  | Maintain a fork/patch, fragile                | Not worth the upkeep for a starter template       |
 | Pin ESLint 9 (chosen)                  | Clean lint, no maintenance | One major behind                              | Lowest risk; trivial to revisit when plugin ships |
+
+---
+
+## ADR-005: ESLint 10 via explicit React version
+
+**Status**: Accepted
+**Date**: 2026-06-29
+**Supersedes**: [ADR-004](#adr-004-eslint-9-pinned-flat-config)
+
+### Context
+
+ADR-004 pinned ESLint to 9.x because `eslint-plugin-react` (7.37.5) crashes on ESLint 10
+during React-version **auto-detection** (`contextOrFilename.getFilename is not a function`).
+ADR-004 only weighed dropping the plugin or patching it. A simpler option was missed: the
+crash fires _only_ in the auto-detect code path, which is skipped when the React version is
+set explicitly.
+
+### Decision
+
+Move to **ESLint 10** (`eslint` ^10.6.0, `@eslint/js` ^10.0.1) and set
+`settings.react.version` explicitly (to the installed React version) in `eslint.config.js`
+instead of `"detect"`. This sidesteps the broken path without dropping or patching the
+plugin. Verified green: lint, typecheck, and build all pass across all workspaces.
+
+### Consequences
+
+**Positive:**
+
+- On the latest ESLint major; parity with `groundwork-ai-lite`.
+- Keeps all React lint rules; no fork/patch to maintain.
+- One-line config change, easy to remove once the plugin declares ESLint 10 support.
+
+**Negative:**
+
+- `eslint-plugin-react`'s declared peer range still stops below 10, so a harmless peer
+  warning remains until it ships official support.
+- `settings.react.version` must be kept roughly in step with the installed React major.
+
+### Alternatives Considered
+
+| Alternative                | Pros          | Cons                               | Why Not                                 |
+| -------------------------- | ------------- | ---------------------------------- | --------------------------------------- |
+| Stay on ESLint 9 (ADR-004) | Zero changes  | A major behind; diverges from lite | Superseded — the workaround is trivial  |
+| Drop `eslint-plugin-react` | Latest ESLint | Lose React rules                   | Unnecessary given the workaround        |
+| Patch/fork the plugin      | Keep rules    | Fragile upkeep                     | The explicit-version setting is simpler |
 
 ---
 

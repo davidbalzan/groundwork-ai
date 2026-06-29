@@ -9,6 +9,9 @@ aliases: ["Stack"]
 > Quick reference: every technology → the files you touch to swap it.
 > For the "why" behind each choice, see [DECISIONS](DECISIONS.md)]].
 
+> Last audited: 2026-06-29 (all deps bumped to latest stable). The "Version"
+> column reflects the pinned major; it matched the latest stable on the audit date.
+
 ---
 
 ## Core
@@ -16,8 +19,8 @@ aliases: ["Stack"]
 | Technology | Version | Files to Change                                                       |
 | ---------- | ------- | --------------------------------------------------------------------- |
 | Node.js    | 22+     | `package.json` (`engines`), `.github/workflows/ci.yml`, `Dockerfile`  |
-| TypeScript | 5.x     | `tsconfig.base.json`, all `tsconfig.json` files, `package.json` (dep) |
-| pnpm       | 10.x    | `package.json` (`packageManager`), `pnpm-workspace.yaml`              |
+| TypeScript | 6.x     | `tsconfig.base.json`, all `tsconfig.json` files, `package.json` (dep) |
+| pnpm       | 11.x    | `package.json` (`packageManager`), `pnpm-workspace.yaml`              |
 | Turborepo  | 2.x     | `turbo.json`, `package.json` (dep)                                    |
 
 ## Frontend (`apps/web/`)
@@ -25,7 +28,7 @@ aliases: ["Stack"]
 | Technology   | Version | Files to Change                                                               |
 | ------------ | ------- | ----------------------------------------------------------------------------- |
 | React        | 19.x    | `apps/web/package.json`, `apps/web/tsconfig.json` (`jsx`), `eslint.config.js` |
-| Vite         | 6.x     | `apps/web/vite.config.ts`, `apps/web/package.json`                            |
+| Vite         | 8.x     | `apps/web/vite.config.ts`, `apps/web/package.json`                            |
 | Tailwind CSS | 4.x     | `apps/web/src/index.css`, `apps/web/package.json`                             |
 
 ## Backend (`apps/api/`)
@@ -33,8 +36,8 @@ aliases: ["Stack"]
 | Technology | Version | Files to Change                                                          |
 | ---------- | ------- | ------------------------------------------------------------------------ |
 | Hono       | 4.x     | `apps/api/package.json`, `apps/api/src/index.ts`, `apps/api/src/routes/` |
-| Zod        | 3.x     | `apps/api/package.json`, `apps/api/src/env.ts`                           |
-| dotenv     | 16.x    | `apps/api/package.json`, `apps/api/src/index.ts`                         |
+| Zod        | 4.x     | `apps/api/package.json`, `apps/api/src/env.ts`                           |
+| dotenv     | 17.x    | `apps/api/package.json`, `apps/api/src/index.ts`                         |
 
 ## Shared Packages
 
